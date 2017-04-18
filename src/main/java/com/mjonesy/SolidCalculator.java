@@ -16,12 +16,12 @@ public class SolidCalculator {
 
     AreaCalculator areaCalculator = new AreaCalculator();
 
-        areaCalculator.sum(circle);
+        areaCalculator.area(circle);
 
         Square square = new Square();
         square.setLength(5);
 
-        areaCalculator.sum(square);
+        areaCalculator.area(square);
 
     }
 

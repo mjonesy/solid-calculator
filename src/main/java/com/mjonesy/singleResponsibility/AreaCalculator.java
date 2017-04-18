@@ -2,21 +2,20 @@ package com.mjonesy.singleResponsibility;
 
 import com.mjonesy.models.Circle;
 import com.mjonesy.models.Square;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class AreaCalculator {
-    @Autowired
     SumCalculatorOutputter sumCalculatorOutputter = new SumCalculatorOutputter();
 
-    public void sum(Circle circle) {
+    public void area(Circle circle) {
         double radius = circle.getRadius();
-        double circleRadius = Math.PI * (radius * radius);
-        sumCalculatorOutputter.outputArea(circleRadius);
+        double circleArea = Math.PI * (radius * radius);
+        sumCalculatorOutputter.outputArea(circleArea);
     }
 
-    public void sum(Square square) {
+    public void area(Square square) {
         double length = square.getLength();
-        sumCalculatorOutputter.outputArea(length);
+        double squareArea = length * length;
+        sumCalculatorOutputter.outputArea(squareArea);
     }
 
 }
